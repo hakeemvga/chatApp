@@ -56,7 +56,7 @@ class _ChatdetailsScreenState extends State<ChatdetailsScreen> {
               ),
             ),
           ],
-        ),
+        ),fgvfhgvgvkr
         actions: [
           SizedBox(
             height: 24.h,
