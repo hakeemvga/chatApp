@@ -1,6 +1,7 @@
-import 'package:chat_app/Screens/MessageScreen.dart';
+import 'package:chat_app/Screens/FollowingScreen.dart';
 import 'package:chat_app/Screens/NotificationScreen.dart';
 import 'package:chat_app/Screens/ProfileScreen.dart';
+import 'package:chat_app/Screens/VideoChooseScreen.dart';
 import 'package:flutter/material.dart';
 
 import 'HomeScreen.dart';
@@ -14,9 +15,10 @@ class BottomNav extends StatefulWidget {
   State<BottomNav> createState() => _BottomNavState();
 }
 
-List<Widget> screens = [
+List<Widget> screens = const [
+  VideosChooseScreen(),
   HomeScreen(),
-  MessageScreen(),
+  FollowingScreen(),
   NotificationScreen(),
   ProfileScreen(),
 ];
@@ -37,7 +39,7 @@ class _BottomNavState extends State<BottomNav> {
               currentIndex = index;
             });
           },
-          items: [
+          items: const [
             BottomNavigationBarItem(
               icon: ImageIcon(AssetImage('assets/vedio_cam_icon.png')),
               label: '',
@@ -45,6 +47,11 @@ class _BottomNavState extends State<BottomNav> {
             BottomNavigationBarItem(
                 icon: ImageIcon(
                   AssetImage('assets/message_icon.png'),
+                ),
+                label: ''),
+            BottomNavigationBarItem(
+                icon: ImageIcon(
+                  AssetImage('assets/plus.png'),
                 ),
                 label: ''),
             BottomNavigationBarItem(
