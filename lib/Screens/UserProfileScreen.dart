@@ -1,4 +1,3 @@
-
 import 'package:chat_app/Screens/SettingScreen.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
@@ -22,8 +21,8 @@ class _UserProfileScreenState extends State<UserProfileScreen> {
       body: Column(
         crossAxisAlignment: CrossAxisAlignment.center,
         children: [
-          SizedBox(width: double.infinity),
-          Container(
+          const SizedBox(width: double.infinity),
+          SizedBox(
             height: 82.h,
             width: 82.w,
             child: Image.asset("assets/gcimg3.png"),
@@ -38,19 +37,19 @@ class _UserProfileScreenState extends State<UserProfileScreen> {
               style: TextStyle(
                   fontSize: 12.sp,
                   fontWeight: FontWeight.w400,
-                  color: Color(0xff797C7B))),
+                  color: const Color(0xff797C7B))),
           SizedBox(height: 30.h),
           SizedBox(
             width: double.infinity,
             child: Row(
               mainAxisAlignment: MainAxisAlignment.spaceEvenly,
               children: [
-                Container(
+                SizedBox(
                   height: 26.h,
                   width: 26.w,
                   child: Image.asset("assets/msgimg+.png"),
                 ),
-                Container(
+                SizedBox(
                   height: 26.h,
                   width: 26.w,
                   child: Image.asset("assets/video+.png"),
@@ -61,8 +60,9 @@ class _UserProfileScreenState extends State<UserProfileScreen> {
                   child: Image.asset("assets/cal++.png"),
                 ),
                 GestureDetector(
-                  onTap: (){
-                    Navigator.of(context).push(MaterialPageRoute(builder: (_)=>const SettingsScreen()));
+                  onTap: () {
+                    Navigator.of(context).push(MaterialPageRoute(
+                        builder: (_) => const SettingsScreen()));
                   },
                   child: SizedBox(
                     height: 26.h,
@@ -161,19 +161,19 @@ class _UserProfileScreenState extends State<UserProfileScreen> {
                       Row(
                         mainAxisAlignment: MainAxisAlignment.spaceBetween,
                         children: [
-                          Container(
+                          SizedBox(
                             height: 92.h,
                             width: 92.w,
                             child: Image.asset("assets/image1.png"),
                           ),
-                          Container(
+                          SizedBox(
                             height: 92.h,
                             width: 92.w,
                             child: Image.asset("assets/image2.png"),
                           ),
                           Stack(
                             children: [
-                              Container(
+                              SizedBox(
                                 height: 92.h,
                                 width: 92.w,
                                 child: Image.asset("assets/image3.png"),
@@ -189,14 +189,11 @@ class _UserProfileScreenState extends State<UserProfileScreen> {
                               Positioned(
                                 top: 38.h,
                                 left: 28.w,
-                                child: Text(
-                                    "255+",
+                                child: Text("255+",
                                     style: TextStyle(
-                                      fontSize: 16.sp,
-                                      fontWeight: FontWeight.w500,
-                                      color: Colors.white
-                                    )
-                                ),
+                                        fontSize: 16.sp,
+                                        fontWeight: FontWeight.w500,
+                                        color: Colors.white)),
                               )
                             ],
                           ),

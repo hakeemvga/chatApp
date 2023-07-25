@@ -16,7 +16,7 @@ class _SettingsScreenState extends State<SettingsScreen> {
       appBar: AppBar(
         elevation: 0,
         backgroundColor: const Color(0xff20A090),
-        title: Text("Settings"),
+        title: const Text("Settings"),
         centerTitle: true,
       ),
       body: Column(
@@ -52,7 +52,7 @@ class _SettingsScreenState extends State<SettingsScreen> {
                             style: TextStyle(
                                 fontSize: 12.sp,
                                 fontWeight: FontWeight.w500,
-                                color: Color(0xff797C7B))),
+                                color: const Color(0xff797C7B))),
                         trailing: SizedBox(
                           height: 24.h,
                           width: 24.w,
@@ -171,7 +171,6 @@ class _SettingsScreenState extends State<SettingsScreen> {
                               fontSize: 16.sp,
                               fontWeight: FontWeight.w500,
                             )),
-
                       ),
                     ],
                   ),

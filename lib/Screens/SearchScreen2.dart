@@ -18,36 +18,34 @@ class _SearchScreen2State extends State<SearchScreen2> {
   @override
   Widget build(BuildContext context) {
     return DefaultTabController(
-      length: 6,
-      child: Scaffold(
-        backgroundColor: const Color(0xff20A090),
-        appBar: AppBar(
-          backgroundColor: const Color(0xff20A090),
-          elevation: 0,
-          bottom:const TabBar(isScrollable:true ,
-            tabs: [
-              Tab(text: "Top"),
-              Tab(text: "Videos"),
-              Tab(text: "User"),
-              Tab(text: "Sound"),
-              Tab(text: "Place"),
-              Tab(text: "HashTag"),
-
-            ],
-          ) ,
-        ),
-        body:const TabBarView(
-          children: [
-            TopScreen(),
-            VideoScreen(),
-            UserScreen(),
-            SoundScreen(),
-            PlaceScreen(),
-            HashTagScreen()
-          ],
-
-        )
-      )
-    );
+        length: 6,
+        child: Scaffold(
+            backgroundColor: const Color(0xff20A090),
+            appBar: AppBar(
+              backgroundColor: const Color(0xff20A090),
+              elevation: 0,
+              bottom: const TabBar(
+                isScrollable: true,
+                indicatorColor: Colors.white,
+                tabs: [
+                  Tab(text: "Top"),
+                  Tab(text: "Videos"),
+                  Tab(text: "User"),
+                  Tab(text: "Sound"),
+                  Tab(text: "Place"),
+                  Tab(text: "HashTag"),
+                ],
+              ),
+            ),
+            body: const TabBarView(
+              children: [
+                TopScreen(),
+                VideoScreen(),
+                UserScreen(),
+                SoundScreen(),
+                PlaceScreen(),
+                HashTagScreen()
+              ],
+            )));
   }
 }
